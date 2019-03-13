@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "myStyle.css" />
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<script type="text/javascript" src="calculate.js"></script>
+	<script type="text/javascript">
+		$('button').on('click', function() {
+	$('#result').html('');
+	//processWord
+	setTimeout(() => {
+		$('#result').html('done!');
+		calculate();
+	}, 1000);
+});
+	</script>
+<div>Check that word suites this language: 
+	S -> [M] <br/>
+	M -> (L|a|b|c)<br/>
+	L -> Ma)<br/>
+</div>
+<input type='text'/>
+<button>check</button>
+<div id='result'></div>
+<div id='authorInfo'>Nagvkina Sofia P3310</div>
 </body>
 </html>

@@ -1,0 +1,35 @@
+html, body {
+	font-family: sans-serif;
+	text-align: center;
+	//background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #666fbe, #004f4f); 
+	background-size: cover;
+	height: 100%;
+}
+
+input {
+	outline: none;
+	border-radius: 6px;
+	background: none;
+  border: 3px solid #ffffff59;
+  font-size: 12pt;
+	color: #53ff94;
+	
+}
+button {
+	cursor: pointer;
+	appearance: none;
+	outline: none;
+	border-radius: 6px;
+	background: none;
+  border: 3px solid #ffffff59;
+  font-size: 12pt;
+	color: #53ff94;
+}
+
+#authorInfo {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	font-weight: bold;
+}
