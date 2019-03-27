@@ -9,7 +9,8 @@
 <body>
 	<script type="text/javascript" src="calculate.js"></script>
 	<script type="text/javascript">
-		document.getElementById('checkBtn').onClick = function() {
+		window.onload = function(){ 
+			document.getElementById('checkBtn').onClick = function() {
 			const msg = document.getElementById('inputMsg').value;
 			calculate(msg)
 				.then(function (result) {
@@ -21,6 +22,7 @@
 						
 				})
 				.catch(console.log);	
+			}
 		}
 	</script>
 <div>Check that word suites this language: 
