@@ -9,12 +9,20 @@
 <body>
 	<script type="text/javascript" src="calculate.js"></script>
 	<script type="text/javascript">
-		$('button').on('click', function() {
-	$('#result').html('');
-	//processWord
-	setTimeout(() => {
-		$('#result').html('done!');
-		calculate();
+		document.getElementById('checkBtn').onClick = function() {
+			const msg = document.getElementById('inputMsg').value;
+			calculate(msg)
+				.then(function (result) {
+					document.getElementById('result').innerHTML = 
+						'result for ' + 
+						msg +
+						'is: ' +
+						result;
+						
+				})
+				.catch(console.log);	
+		}
+		calculate;
 	}, 1000);
 });
 	</script>
@@ -23,8 +31,8 @@
 	M -> (L|a|b|c)<br/>
 	L -> Ma)<br/>
 </div>
-<input type='text'/>
-<button>check</button>
+<input type='text'id='inputMsg'/>
+<button id='checkBtn'>check</button>
 <div id='result'></div>
 <div id='authorInfo'>Nagvkina Sofia P3310</div>
 </body>
