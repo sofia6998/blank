@@ -11,9 +11,11 @@
 	<script type="text/javascript">
 		window.onload = function(){ 
 			document.getElementById('checkBtn').onClick = function() {
+				console.log('onClick');
 			const msg = document.getElementById('inputMsg').value;
 			calculate(msg)
 				.then(function (result) {
+					console.log('result', result);
 					document.getElementById('result').innerHTML = 
 						'result for ' + 
 						msg +
@@ -21,7 +23,7 @@
 						result;
 						
 				})
-				.catch(console.log);	
+				.catch(() => console.log('why?'));	
 			}
 		}
 	</script>

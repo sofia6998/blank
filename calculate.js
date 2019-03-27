@@ -31,6 +31,7 @@ const rules = {
 };
 
 function calculate(msgString) {
+    console.log('calculate');
 	return new Promise((resolve) => {
 		const msg = msgString.split('');
 	    const stack = [];
@@ -52,6 +53,7 @@ function calculate(msgString) {
 
     convolution(stack);
     if (stack.length === 2 && stack['0'] === '#' && stack[1] === 'S') {
+        console.log('resolve it');
         resolve('Yes');
     } else {
         resolve('No');
